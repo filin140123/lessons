@@ -1,0 +1,31 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="enemy_lib.opponent" />
+          <option value="enemy_lib.*" />
+          <option value="player_init.container" />
+          <option value="player_init.hero" />
+          <option value="inspect_lib.item" />
+          <option value="inspect_lib.*" />
+          <option value="player_init.new_name" />
+          <option value="hero_classes.container" />
+          <option value="hero_classes.hero" />
+          <option value="hud.*" />
+          <option value="player_lib.*" />
+          <option value="control_scheme.opponent" />
+          <option value="control_scheme.*" />
+          <option value="battle_lib.*" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+  </profile>
+</component>
