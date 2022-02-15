@@ -1,0 +1,35 @@
+--- Date ---
+Tue, 15 Feb 2022 12:26:55 GMT
+
+--- Content-Type ---
+text/html
+charset=UTF-8
+
+--- Content-Length ---
+7783
+
+--- Connection ---
+keep-alive
+
+--- Server ---
+Jino.ru/mod_pizza
+
+--- P3P ---
+CP="NOI NID ADMa OUR IND UNI COM NAV"
+
+--- Cache-Control ---
+private, must-revalidate
+
+--- Set-Cookie ---
+evo1s0s5lq=7b03c148bbbc7c225f10faf50e83cf05
+path=/, evo1s0s5lq=7b03c148bbbc7c225f10faf50e83cf05
+path=/
+secure
+httponly
+
+--- Vary ---
+Accept-Encoding
+
+--- Content-Encoding ---
+gzip
+

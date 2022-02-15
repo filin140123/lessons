@@ -1,0 +1,80 @@
+--- Server ---
+kittenx
+
+--- Date ---
+Tue, 15 Feb 2022 12:17:50 GMT
+
+--- Content-Type ---
+text/html
+charset=utf-8
+
+--- Content-Length ---
+16916
+
+--- Connection ---
+keep-alive
+
+--- X-Powered-By ---
+KPHP/7.4.110180
+
+--- Set-Cookie ---
+remixir=DELETED
+expires=Thu, 01 Jan 1970 00:00:01 GMT
+path=/
+domain=.vk.com
+secure
+HttpOnly, remixir=DELETED
+expires=Thu, 01 Jan 1970 00:00:01 GMT
+path=/
+domain=.vk.com
+secure
+HttpOnly, remixlgck=d8e55b8efb63ec05cc
+expires=Sat, 18 Feb 2023 06:07:32 GMT
+path=/
+domain=.vk.com
+secure
+HttpOnly, remixQUIC=1
+expires=Fri, 10 Feb 2023 05:31:04 GMT
+path=/
+domain=.vk.com
+secure, remixaudio_show_alert_today=0
+expires=Wed, 16 Feb 2022 12:17:50 GMT
+path=/
+domain=.vk.com
+secure, remixff=0
+expires=Fri, 25 Feb 2022 12:17:50 GMT
+path=/
+domain=.vk.com
+secure, remixua=-1%7C-1%7C312%7C2084737225
+expires=Sat, 11 Feb 2023 22:26:31 GMT
+path=/
+domain=.vk.com
+secure
+
+--- Cache-control ---
+no-store
+
+--- P3P ---
+CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"
+
+--- X-Frame-Options ---
+SAMEORIGIN
+
+--- Content-Security-Policy ---
+default-src * data: blob: about: vkcalls:;script-src 'self' https://vk.com https://*.vk.com https://static.vk.me https://*.mail.ru https://r.mradx.net https://s.ytimg.com https://platform.twitter.com https://cdn.syndication.twimg.com https://www.instagram.com https://connect.facebook.net https://telegram.org https://*.yandex.ru https://*.google-analytics.com https://*.youtube.com https://maps.googleapis.com https://translate.googleapis.com https://*.google.com https://google.com https://*.vkpartner.ru https://*.moatads.com https://*.adlooxtracking.com https://*.gstatic.com https://*.google.ru https://securepubads.g.doubleclick.net https://cdn.ampproject.org https://www.googletagmanager.com https://googletagmanager.com https://*.vk-cdn.net https://*.hit.gemius.pl https://yastatic.net https://analytics.tiktok.com 'unsafe-inline' 'unsafe-eval' blob:;style-src https://vk.com https://*.vk.com https://static.vk.me https://r.mradx.net https://ton.twimg.com https://tagmanager.google.com https://platform.twitter.com https://*.googleapis.com 'self' 'unsafe-inline'
+
+--- X-XSS-Protection ---
+1
+report=/xss_reports
+
+--- Content-Encoding ---
+gzip
+
+--- Strict-Transport-Security ---
+max-age=15768000
+
+--- alt-svc ---
+h3=":443"
+ma=86400,h3-29=":443"
+ma=86400
+
