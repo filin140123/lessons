@@ -14,9 +14,9 @@ statistics = {
 }
 
 
-def current_map(vis_coor):
+def current_map(visited_tile):
     temp_dict = worldmap.tiles
-    temp_dict.update(vis_coor)
+    temp_dict.update(visited_tile)
     list_map = []
     for k, v in temp_dict.items():
         if isinstance(v, str):
@@ -40,8 +40,8 @@ def current_map(vis_coor):
     return p.get_string(header=False, hrules=True)
 
 
-def calc_chance_on_map(direction, cpos, vpos):
-    if cpos in vpos:
+def calc_chance_on_map(direction, current_position: list, visited_positions: list):
+    if current_position in visited_positions:
         return "Already visited"  # TODO: Event placeholder
 
     x = randint(1, 100)
