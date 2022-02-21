@@ -47,9 +47,12 @@ def calc_chance_on_map(direction, current_position: list, visited_positions: lis
     x = randint(1, 100)
     if x <= direction[0]:
         statistics["enemies"] += 1
+        player_health.health_down(5)  # TODO: Player health down test
+        player_inventory.append_item("loot")  # TODO: Reward for killing enemy test
         return "You met the enemy"  # TODO: Event placeholder
     elif x <= direction[0] + direction[1]:
         statistics["treasures"] += 1
+        player_inventory.append_item("coin")  # TODO: Item Appending test
         return "You found the treasure"  # TODO: Event placeholder
     else:
         return "You found nothing"  # TODO: Event placeholder
@@ -72,8 +75,18 @@ while True:
         if action == d:
             coor.write_coordinates()
             coor.moving_on_coordinates(d)
-            print(calc_chance_on_map(worldmap.tiles[d], coor.current_pos, coor.visited_positions))  # TODO: Placeholder
+            print(calc_chance_on_map(worldmap.tiles[d], coor.current_pos, coor.visited_positions))
+
+    if action.startswith("discard "):
+        tmp_action = action.split(" ")
+        tmp_action[1] = "".join(tmp_action[1:])
+        player_inventory.discard_item(tmp_action[1])
+
     if action in ["quit", "exit"]:
+        break
+
+    if not player_health.is_alive():
+        print("Game Over")
         break
 
     worldmap = reload(worldmap)

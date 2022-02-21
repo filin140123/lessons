@@ -1,4 +1,6 @@
 class PlayerInventory:
+    on_the_floor = None
+
     def __init__(self, size):
         self.container = []
         self.size = size
@@ -14,6 +16,7 @@ class PlayerInventory:
             self.container.append(item)
         else:
             print("Inventory is full.")
+            self.on_the_floor = item
 
     def discard_item(self, item):
         if item in self.container:
