@@ -8,7 +8,7 @@ class PlayerInventory:
     def __str__(self):
         counter = f"{len(self.container)}/{self.size}"
         if not self.container:
-            return f"Empty, {counter}"
+            return f"empty, {counter}"
         return f"{self.container}, {counter}"
 
     def append_item(self, item):

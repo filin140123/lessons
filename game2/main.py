@@ -71,11 +71,13 @@ while True:
     print(statistics)
 
     action = input("Where do you want to go?: ")
+
     for d in worldmap.game_map.DIRECTIONS:
         if action == d:
             coor.write_coordinates()
             coor.moving_on_coordinates(d)
             print(calc_chance_on_map(worldmap.tiles[d], coor.current_pos, coor.visited_positions))
+            worldmap = reload(worldmap)
 
     if action.startswith("discard "):
         tmp_action = action.split(" ")
@@ -88,5 +90,3 @@ while True:
     if not player_health.is_alive():
         print("Game Over")
         break
-
-    worldmap = reload(worldmap)
