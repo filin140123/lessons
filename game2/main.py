@@ -5,6 +5,13 @@ from prettytable import PrettyTable, DOUBLE_BORDER
 
 import worldmap
 from coordinates import coor
+from inventory import player_inventory
+from health import player_health
+
+statistics = {
+    "treasures": 0,
+    "enemies": 0,
+}
 
 
 def current_map(vis_coor):
@@ -39,8 +46,10 @@ def calc_chance_on_map(direction, cpos, vpos):
 
     x = randint(1, 100)
     if x <= direction[0]:
+        statistics["enemies"] += 1
         return "You met the enemy"  # TODO: Event placeholder
     elif x <= direction[0] + direction[1]:
+        statistics["treasures"] += 1
         return "You found the treasure"  # TODO: Event placeholder
     else:
         return "You found nothing"  # TODO: Event placeholder
@@ -51,16 +60,20 @@ while True:
     print(cmap)
     # print(worldmap.tiles)
     print("current position:", coor)
-    print("tiles traveled:", coor.get_distance(), "|", "unique tiles traveled:", coor.get_visited_positions())
+    print("tiles traveled:", coor.get_distance(), "|", "unique tiles:", coor.get_visited_positions())
     # print("all:", coor.stored_positions)
     # print("unique:", coor.visited_positions)
+    print("Health:", player_health)
+    print("Inventory:", player_inventory)
+    print(statistics)
+
     action = input("Where do you want to go?: ")
     for d in worldmap.game_map.DIRECTIONS:
         if action == d:
             coor.write_coordinates()
             coor.moving_on_coordinates(d)
             print(calc_chance_on_map(worldmap.tiles[d], coor.current_pos, coor.visited_positions))  # TODO: Placeholder
-    if action in ["quit", "exit", ""]:
+    if action in ["quit", "exit"]:
         break
 
     worldmap = reload(worldmap)
