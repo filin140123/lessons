@@ -1,5 +1,4 @@
 class Car:
-
     wheels_number = 4
 
     def __init__(self, name: str, color: str, year: int, is_crashed: bool):
@@ -33,6 +32,7 @@ class Truck(Car):
         print(f"Cargo is loaded. Weight is {weight} kg")
 
 
+# tests
 man_truck = Truck("MAN", "white", 2020, False)
 man_truck.driving_to("New York")
 man_truck.change_color("black")
