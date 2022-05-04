@@ -39,6 +39,6 @@ def product(range_value=1_000_00):
     return result
 
 
-sum_with_list()
-sum_with_gen()
-product()
+# sum_with_list()
+# sum_with_gen()
+# product()

@@ -1,5 +1,3 @@
-from random import sample
-
 input()  # input data from user
 print()  # output data to user
 
