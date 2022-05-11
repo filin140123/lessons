@@ -39,7 +39,7 @@ class Player(Entity):
         self.upgrade_cost = {k: 100 for k, v in self.max_stats.items()}
         self.health = self.stats["health"]
         self.energy = self.stats["energy"]
-        self.exp = 100
+        self.exp = 0
         self.speed = self.stats["speed"]
 
         self.vulnerable = True
@@ -177,6 +177,12 @@ class Player(Entity):
         spell = magic_data[self.magic]["strength"]
         return base + spell
 
+    def get_value_by_index(self, index):
+        return list(self.stats.values())[index]
+
+    def get_cost_by_index(self, index):
+        return list(self.upgrade_cost.values())[index]
+
     def energy_recovery(self):
         if self.energy <= self.stats["energy"]:
             self.energy += 0.01 * self.stats["magic"]
@@ -188,5 +194,5 @@ class Player(Entity):
         self.cooldowns()
         self.get_status()
         self.animate()
-        self.move(self.speed)
+        self.move(self.stats["speed"])
         self.energy_recovery()

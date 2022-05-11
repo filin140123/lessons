@@ -33,7 +33,7 @@ class Enemy(Entity):
         self.attack_cooldown = 400
         self.damage_player = damage_player
         self.trigger_death_particles = trigger_death_particles
-        self.add_exp
+        self.add_exp = add_exp
 
         self.vulnerable = True
         self.hit_time = None
