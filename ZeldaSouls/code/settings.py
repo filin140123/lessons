@@ -16,7 +16,7 @@ UI_BORDER_COLOR = "#111111"
 TEXT_COLOR = "#EEEEEE"
 
 HEALTH_COLOR = "red"
-ENERGY_COLOR = "blue"
+ENERGY_COLOR = "cyan"
 UI_BORDER_COLOR_ACTIVE = "gold"
 
 weapon_data = {
