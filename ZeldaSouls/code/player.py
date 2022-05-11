@@ -34,7 +34,9 @@ class Player(Entity):
         self.can_switch_magic = True
         self.magic_switch_time = None
 
-        self.stats = {"health": 100, "energy": 60, "attack": 10, "magic": 4, "speed": 7}
+        self.stats = {"health": 100, "energy": 60, "attack": 10, "magic": 4, "speed": 5}
+        self.max_stats = {"health": 300, "energy": 140, "attack": 20, "magic": 10, "speed": 10}
+        self.upgrade_cost = {k: 100 for k, v in self.max_stats.items()}
         self.health = self.stats["health"]
         self.energy = self.stats["energy"]
         self.exp = 100
