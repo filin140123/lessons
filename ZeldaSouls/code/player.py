@@ -10,7 +10,7 @@ class Player(Entity):
         super().__init__(groups)
         self.image = pygame.image.load("../graphics/test/player.png").convert_alpha()
         self.rect = self.image.get_rect(topleft=pos)
-        self.hitbox = self.rect.inflate(-26, -26)
+        self.hitbox = self.rect.inflate(-6, HITBOX_OFFSET["player"])
 
         self.import_player_assets()
         self.status = "down"
@@ -36,7 +36,7 @@ class Player(Entity):
 
         self.stats = {"health": 100, "energy": 60, "attack": 10, "magic": 4, "speed": 5}
         self.max_stats = {"health": 300, "energy": 140, "attack": 20, "magic": 10, "speed": 10}
-        self.upgrade_cost = {k: 100 for k, v in self.max_stats.items()}
+        self.upgrade_cost = {k: 200 for k, v in self.max_stats.items()}
         self.health = self.stats["health"]
         self.energy = self.stats["energy"]
         self.exp = 0
@@ -45,6 +45,9 @@ class Player(Entity):
         self.vulnerable = True
         self.hurt_time = None
         self.invulnerabilty_duration = 500
+
+        self.weapon_attack_sound = pygame.mixer.Sound("../audio/sword.wav")
+        self.weapon_attack_sound.set_volume(0.1)
 
     def import_player_assets(self):
         character_path = "../graphics/player/"
@@ -83,6 +86,7 @@ class Player(Entity):
                 self.attacking = True
                 self.attack_time = pygame.time.get_ticks()
                 self.create_attack()
+                self.weapon_attack_sound.play()
 
             if keys[pygame.K_LCTRL]:
                 self.attacking = True

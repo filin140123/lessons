@@ -2,7 +2,9 @@ import pygame
 import sys
 from settings import *
 from level import Level
-# from debug import debug
+# from saveload import SaveLoadSystem
+
+# saveloadmanager = SaveLoadSystem(".save", "save_data")
 
 
 class Game:
@@ -14,6 +16,10 @@ class Game:
 
         self.level = Level()
 
+        self.main_sound = pygame.mixer.Sound("../audio/main.ogg")
+        self.main_sound.set_volume(0.2)
+        self.main_sound.play(loops=-1)
+
     def run(self):
         while True:
             for event in pygame.event.get():
@@ -24,7 +30,7 @@ class Game:
                     if event.key == pygame.K_m:
                         self.level.toggle_menu()
 
-            self.screen.fill('black')
+            self.screen.fill(WATER_COLOR)
             self.level.run()
             pygame.display.update()
             self.clock.tick(FPS)
